@@ -1,0 +1,292 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+
+/* Global Styles */
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  height: 100vh;
+  background-color: #f5faff;
+}
+
+/* Navbar Styles */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 98%;
+  height: 70px;
+  background: linear-gradient(to right, #3B1C32, #6A1E55);
+  color: #faf5ff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  box-shadow: 0 2px 5px #f5faff;
+  z-index: 1000;
+}
+
+/* Navbar Left */
+.navbar-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Navbar Title */
+.navbar-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+/* Top-right icons */
+.top-right-icons {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.icon.profile-icon{
+  background-color: #f5faff;
+}
+
+.icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background-color: #a64d79;
+  border: 2px solid #3B1C32;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.icon i {
+  font-size: 20px;
+  color: #f5faff;
+}
+
+/* Gaya untuk label profile-icon */
+.profile-upload-label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background-color: #a64d79;
+  border: 2px solid #3B1C32;
+  border-radius: 50%;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+/* Gaya untuk gambar profil */
+.profile-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+/* Sidebar Styles */
+.sidebar {
+  width: 250px;
+  background: #CCACBC;
+  height: 100%;
+  position: fixed;
+  top: 70px;
+  left: 0;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.sidebar-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 15px 20px;
+  color: #3b1c32;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.menu-item.active, .menu-item:hover {
+  background: #f5faff;
+  color: #3B1C32;
+  font-weight: bold;
+}
+
+/* Content Styles */
+.content {
+  margin-left: 250px;
+  padding: 80px 20px;
+  width: calc(100% - 250px);
+  text-align: center;
+}
+
+.section-title {
+  font-size: 35px;
+  color: #3b1c32;
+  margin: 3px;
+  letter-spacing: 3px;
+}
+
+.box {
+  background-color: #fff;
+  border: 3px solid #3B1C32;
+  border-radius: 20px;
+  padding: 18px;
+  width: 97%;
+  height: auto;
+}
+
+.group-title {
+  text-align: left;
+  font-size: 25px;
+  margin: 3px;
+  color: #3B1C32;
+  letter-spacing: 4px;
+}
+
+.task-button {
+  margin-bottom: 10px;
+  display: flex;
+  font-size: 18px;
+  letter-spacing: 3px;
+  border-radius: 10px;
+}
+
+/* Task Container */
+.task-container {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.left-panel {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.pdf-viewer {
+  background-color: #f5faff;
+  padding: 10px;
+  border: 2px solid #3B1C32;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px #a64d79;
+}
+
+.pdf-viewer h4 {
+  margin-bottom: 10px;
+  font-size: 18px;
+  color: #3B1C32;
+}
+
+iframe {
+  width: 100%;
+  height: 360px;
+  border: 3px solid #3B1C32;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px #a64d79;
+}
+
+.right-panel {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.member-details {
+  background-color: #f5faff;
+  padding: 14px;
+  border: 2px solid #3B1C32;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px #a64d79;
+}
+
+.member-details h3 {
+  margin: 2px;
+  font-size: 16px;
+  color: #3B1C32;
+  text-align: left;
+  padding-left: 15px;
+}
+
+.member-details input {
+  width: 90%;
+  padding: 10px;
+  margin: 2px;
+  border: 1px solid #3B1C32;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.grade-input {
+  background-color: #f5faff;
+  padding: 14px;
+  border: 2px solid #3B1C32;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px #a64d79;
+}
+
+.grade-input h3 {
+  margin: 2px;
+  font-size: 16px;
+  color: #3B1C32;
+  text-align: left;
+  padding-left: 15px;
+}
+
+.grade-input input, .grade-input textarea {
+  width: 90%;
+  padding: 10px;
+  margin: 2px;
+  border: 1px solid #3B1C32;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.input-button {
+  background-color: #6A1E55;
+  color: #faf5ff;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 5px;
+  display: block;
+  text-align: right;
+}
+
+.input-button:hover {
+  background-color: #a64d79;
+}
+
+.task-button {
+  background-color: #6A1E55;
+  color: #faf5ff;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.task-button:hover {
+  background-color: #a64d79;
+}

@@ -1,0 +1,343 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+
+/* Global Styles */
+body {
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    display: flex;
+    height: 100vh;
+    background-color: #f5faff;
+  }
+  
+/* Navbar Styles */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 98%;
+  height: 70px;
+  background: linear-gradient(to right, #3B1C32, #6A1E55);
+  color: #faf5ff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  box-shadow: 0 2px 5px #f5faff;
+  z-index: 1000;
+}
+
+/* Navbar Left */
+.navbar-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Navbar Title */
+.navbar-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+/* Top-right icons */
+.top-right-icons {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+
+.icon.profile-icon{
+  background-color: #f5faff;
+}
+
+.icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background-color: #a64d79;
+  border: 2px solid #3B1C32;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.icon i {
+  font-size: 20px;
+  color: #f5faff;
+}
+
+/* Gaya untuk label profile-icon */
+.profile-upload-label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background-color: #a64d79;
+  border: 2px solid #3B1C32;
+  border-radius: 50%;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+/* Gaya untuk gambar profil */
+.profile-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+/* Sidebar Styles */
+.sidebar {
+  width: 250px;
+  background: #CCACBC;
+  height: 100%;
+  position: fixed;
+  top: 70px;
+  left: 0;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.sidebar-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 15px 20px;
+  color: #3b1c32;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.menu-item.active, .menu-item:hover {
+  background: #f5faff;
+  color: #3B1C32;
+  font-weight: bold;
+}
+
+
+/* Main Content */
+.main-content {
+  margin-left: 250px;
+  padding: 80px 20px;
+  width: calc(100% - 250px);
+  /* text-align: center; */
+}
+
+/* BOX 1 */
+.box {
+  background: #f5faff;
+  border: 3px solid #3B1C32;
+  border-radius: 20px;
+  padding: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  box-shadow: 0 2px 5px #a64d79;
+}
+
+.box-header {
+  width: 60%;
+  margin-left: 5px;
+  margin-right: 0%;
+}
+
+.box-header h1 {
+  color: #3B1C32;
+  margin-left: auto;
+  margin-bottom: 5px;
+}
+
+.box-header p {
+  color: #3B1C32;
+  margin-left: auto;
+  margin-top: 5px;
+  font-weight: 500;
+}
+
+.box-header .start-button {
+  padding: 10px 25px;                /* Ukuran tombol */
+  background-color: #6A1E55;         /* Warna latar belakang tombol */
+  color: #fff;                       /* Warna teks tombol */
+  font-size: 16px;                   /* Ukuran font */
+  font-weight: bold;                 /* Teks tebal */
+  border: none;                      /* Hilangkan border */
+  border-radius: 5px;                /* Sudut melengkung */
+  cursor: pointer;                   /* Kursor berubah jadi pointer */
+  transition: all 0.3s ease;         /* Efek transisi halus */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Tambahkan bayangan */
+  letter-spacing: 5px;
+  font-size: medium;
+  font-weight: 500;
+}
+
+.box-header .start-button:hover {
+  background-color: #a64d79;         /* Warna saat tombol dihover */
+  box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.3); /* Bayangan lebih besar saat hover */
+  transform: scale(1.05);            /* Membesarkan tombol sedikit saat hover */
+}
+
+.box-header .start-button:active {
+  background-color: #5a1a4a;         /* Warna saat tombol ditekan */
+  transform: scale(0.95);            /* Mengecilkan tombol sedikit saat ditekan */
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2); /* Bayangan mengecil */
+}
+
+.box-content {
+  width: 25%;
+  background: #CCACBC;
+  padding: 15px;
+  border-radius: 20px;
+}
+
+.box-content h2 {
+  color: #f5faff;
+  text-align: center;
+  font-weight: 800;
+  letter-spacing: 5px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+ul {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  list-style-type: disc; /* Menampilkan bullet points berbentuk lingkaran */
+  padding-left: 30px; /* Menambahkan jarak di sisi kiri daftar */
+  padding-bottom: 0px;
+}
+
+li {
+  margin-top: 0px;
+  margin-bottom: 0px; /* Memberikan jarak antar item dalam daftar */
+  font-size: 16px; /* Menyesuaikan ukuran font */
+  font-weight: 600;
+  color: #3B1C32;
+}
+
+/* BOX 2 */
+.box-content-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Pastikan semua elemen sejajar secara vertikal */
+  margin-top: 5px;
+  margin-bottom: 5px;
+  padding: 5px; /* Jarak dalam kotak besar */
+  border-radius: 5px; /* Membuat sudut sedikit melengkung */
+}
+
+.quiz-card {
+  display: flex;
+  align-items: center; /* Ikon dan teks berada dalam satu garis horizontal */
+  justify-content: flex-end; /* Memastikan ikon di awal */
+  gap: 10px; /* Memberikan jarak antar elemen */
+  margin-right: auto;
+  color: #6A1E55;
+  margin-left: 100px;
+  margin-right: 250px;
+}
+
+.time-card{
+  display: flex;
+  align-items: center; /* Ikon dan teks berada dalam satu garis horizontal */
+  justify-content: flex-start; /* Memastikan ikon di awal */
+  gap: 10px; /* Memberikan jarak antar elemen */
+  margin-left: 250px;
+  margin-right: 100px;
+  color: #6A1E55;
+}
+
+.time-card i, .quiz-card i {
+  font-size: 24px; /* Ukuran ikon */
+}
+
+.time-info, .quiz-info {
+  display: block;
+}
+
+.time-card p, .quiz-card p {
+  font-size: 20px;
+  font-weight: bold;
+  text-align: left;
+  color: #3B1C32;
+}
+
+/* Details Section */
+.details-section {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.details-section h4 {
+  font-size: 22px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.details-section .left, .details-section .right {
+  width: 48%;
+  color: #3B1C32;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.details-section .left p {
+  margin-top: 3px;
+  margin-bottom: 0%;
+}
+
+.details-section .right ul li {
+  margin-top: 3px;
+  margin-bottom: 0%;
+  margin-left: 0px;
+  padding-left: 0px;
+}
+
+.syllabus-section {
+  margin-top: 20px;
+  color: #3B1C32;
+}
+
+.syllabus-section h4 {
+  font-size: 22px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  color: #3B1C32;
+}
+
+.syllabus-section p {
+  margin-top: 3px;
+  margin-bottom: 0%;
+  color: #3B1C32;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.accordion {
+  margin-top: 10px;
+  color: #3B1C32;
+}
+
+.accordion-item {
+  background: #f5faff;
+  border: 2px solid #3b1c32;
+  padding: 10px;
+  margin-bottom: 5px;
+  border-radius: 5px;
+}

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>THINKSPHERE | TEST</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="css/Test_Mulai.css">
+</head>
+
+<body>
+   
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="navbar-left">
+      <div class="icon profile-icon">
+        <img src="images/Logo.png" alt="Profile" id="profile-image-left" class="profile-img" />
+      </div>
+      <h1 class="navbar-title">THINKSPHERE</h1>
+    </div>
+  
+    <div class="top-right-icons">
+      <div class="icon">
+        <i class="fas fa-info-circle"></i>
+      </div>
+      <div class="icon">
+        <i class="fas fa-bell"></i>
+      </div>
+      <div class="icon profile-icon">
+        <!-- Input gambar -->
+        <label for="profile-upload" class="profile-upload-label">
+          <img src="images/Riana.JPG" alt="Profile" id="profile-image" class="profile-img" />
+        </label>
+        <input type="file" id="profile-upload" accept="image/*" style="display: none;" />
+      </div>
+    </div>
+  </header>
+  
+  <!-- ganti gambar dengan upload baru -->
+  <script>
+      const profileUpload = document.getElementById('profile-upload');
+      const profileImage = document.getElementById('profile-image');
+    
+      profileUpload.addEventListener('change', function () {
+        const file = this.files[0];
+        if (file) {
+          const reader = new FileReader();
+          reader.onload = function (e) {
+            profileImage.src = e.target.result; // Ganti gambar dengan yang dipilih
+          };
+          reader.readAsDataURL(file);
+        }
+      });
+  </script>
+
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <nav class="sidebar-menu">
+      <a href="Dashboard_Siswa.html" class="menu-item"><i class="fas fa-chart-line"></i>DASHBOARD</a>
+      <a href="Pembelajaran.html" class="menu-item"><i class="fas fa-book"></i>PEMBELAJARAN</a>
+      <a href="Tugas.html" class="menu-item"><i class="fas fa-file-alt"></i>TUGAS</a>
+      <a href="Test.html" class="menu-item active"><i class="fas fa-question-circle"></i>TEST</a>
+      <a href="#" class="menu-item"><i class="fas fa-sign-out-alt"></i>LOGOUT</a>
+    </nav>
+  </aside>
+
+  <script>
+    const menuItems = document.querySelectorAll('.menu-item');
+    menuItems.forEach(item => {
+      if (item.href === window.location.href) {
+        item.classList.add('active');
+      }
+    });
+  </script>
+
+  <!-- Content -->
+  <div class="content">
+    <div class="quiz-container">
+      <h2>SELAMAT DATANG DI PRETEST</h2>
+      <h3>PEMBELAJARAN SISTEM KOMPUTER</h3>
+      <p>Jawablah pertanyaan berikut untuk menguji pemahaman Anda.</p>
+  
+      <div id="quiz-content">
+
+        <div class="question-box">
+          <div class="question">
+          <p><b>Pertanyaan 1: </b>Apa itu sistem komputer?</p>
+          <ul class="answers">
+            <li><input type="radio" name="q1" value="1"> Sekumpulan perangkat keras</li>
+            <li><input type="radio" name="q1" value="2"> Komponen hardware dan software yang saling bekerja sama</li>
+            <li><input type="radio" name="q1" value="3"> Program aplikasi</li>
+            <li><input type="radio" name="q1" value="4"> Program aplikasi</li>
+            <li><input type="radio" name="q1" value="5"> Program aplikasi</li>
+          </ul>
+          </div>
+        </div>
+  
+        <div class="question-box">
+          <div class="question">
+          <p><b>Pertanyaan 2: </b>Apa tujuan utama sistem operasi?</p>
+          <ul class="answers">
+            <li><input type="radio" name="q2" value="1"> Mengelola perangkat keras</li>
+            <li><input type="radio" name="q2" value="2"> Mengelola perangkat lunak</li>
+            <li><input type="radio" name="q2" value="3"> Semua jawaban benar</li>
+            <li><input type="radio" name="q1" value="4"> Program aplikasi</li>
+            <li><input type="radio" name="q1" value="5"> Program aplikasi</li>
+          </ul>
+          </div>
+        </div>
+
+        <div class="question-box">
+          <div class="question">
+          <p><b>Pertanyaan 3: </b>Apa itu sistem komputer?</p>
+          <ul class="answers">
+            <li><input type="radio" name="q1" value="1"> Sekumpulan perangkat keras</li>
+            <li><input type="radio" name="q1" value="2"> Komponen hardware dan software yang saling bekerja sama</li>
+            <li><input type="radio" name="q1" value="3"> Program aplikasi</li>
+            <li><input type="radio" name="q1" value="4"> Program aplikasi</li>
+            <li><input type="radio" name="q1" value="5"> Program aplikasi</li>
+          </ul>
+          </div>
+        </div>
+  
+        <div class="question-box">
+          <div class="question">
+          <p><b>Pertanyaan 4: </b>Apa tujuan utama sistem operasi?</p>
+          <ul class="answers">
+            <li><input type="radio" name="q2" value="1"> Mengelola perangkat keras</li>
+            <li><input type="radio" name="q2" value="2"> Mengelola perangkat lunak</li>
+            <li><input type="radio" name="q2" value="3"> Semua jawaban benar</li>
+            <li><input type="radio" name="q1" value="4"> Program aplikasi</li>
+            <li><input type="radio" name="q1" value="5"> Program aplikasi</li>
+          </ul>
+          </div>
+        </div>
+
+        <button class="btn" onclick="submitQuiz()">Kirim Jawaban</button>
+      
+      </div>
+      
+    </div>
+  
+    <script>
+      function submitQuiz() {
+        alert('Terima kasih! Jawaban Anda telah terkirim.');
+        // Anda dapat menambahkan logika untuk memproses jawaban atau mengarahkan pengguna ke halaman lain.
+      }
+    </script>
+  </div>
+
+</body>
+</html>

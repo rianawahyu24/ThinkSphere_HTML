@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DASHBOARD GURU | PEMBELAJARAN</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="css/Pembelajaran_Tambah_StudiKasus.css">
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <header class="navbar">
+  <div class="navbar-left">
+    <div class="icon profile-icon">
+      <img src="images/Logo.png" alt="Profile" id="profile-image-left" class="profile-img" />
+    </div>
+    <h1 class="navbar-title">THINKSPHERE</h1>
+  </div>
+
+  <div class="top-right-icons">
+    <div class="icon">
+      <i class="fas fa-info-circle"></i>
+    </div>
+    <div class="icon">
+      <i class="fas fa-bell"></i>
+    </div>
+    <div class="icon profile-icon">
+      <!-- Input gambar -->
+      <label for="profile-upload" class="profile-upload-label">
+        <img src="images/Riana.JPG" alt="Profile" id="profile-image" class="profile-img" />
+      </label>
+      <input type="file" id="profile-upload" accept="image/*" style="display: none;" />
+    </div>
+  </div>
+  </header>
+
+  <!-- ganti gambar dengan upload baru -->
+  <script>
+    const profileUpload = document.getElementById('profile-upload');
+    const profileImage = document.getElementById('profile-image');
+  
+    profileUpload.addEventListener('change', function () {
+      const file = this.files[0];
+      if (file) {
+        const reader = new FileReader();
+        reader.onload = function (e) {
+          profileImage.src = e.target.result; // Ganti gambar dengan yang dipilih
+        };
+        reader.readAsDataURL(file);
+      }
+    });
+  </script>
+
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <nav class="sidebar-menu">
+      <a href="Dashboard_Guru.html" class="menu-item"><i class="fas fa-chart-line"></i>DASHBOARD</a>
+      <a href="Pembelajaran.html" class="menu-item active"><i class="fas fa-book"></i>PEMBELAJARAN</a>
+      <a href="Tugas.html" class="menu-item"><i class="fas fa-file-alt"></i>TUGAS</a>
+      <a href="Test.html" class="menu-item"><i class="fas fa-question-circle"></i>TEST</a>
+      <a href="Siswa.html" class="menu-item"><i class="fas fa-user"></i>SISWA</a>
+      <a href="#" class="menu-item"><i class="fas fa-sign-out-alt"></i>LOGOUT</a>
+    </nav>
+  </aside>
+
+  <script>
+    const menuItems = document.querySelectorAll('.menu-item');
+    menuItems.forEach(item => {
+      if (item.href === window.location.href) {
+        item.classList.add('active');
+      }
+    });
+  </script>
+
+  <!-- Content -->
+  <div class="content">
+    <h2 class="section-title">Membuat Studi Kasus Baru !!</h2>
+    <a href="Pembelajaran_TambahBaru.html"><button class="cancel-button">Batalkan</button></a>
+    
+    <div class="ketentuan">
+      <h3>Ketentuan Studi Kasus yang akan dikerjakan oleh siswa !!</h3>
+      <ul>
+        <li>Studi kasus adalah tahapan ELABORATION dari Model Learning Cycle 7E.</li>
+        <li>Soal harus berbentuk .pdf ketika diupload.</li>
+        <li>Jawaban juga harus diupload oleh setiap siswa dalam bentuk file .pdf.</li>
+      </ul>
+    </div>
+
+    <form class="upload-form">
+      <label for="judul">Upload Studi Kasus pada Form dibawah ini !!</label>
+      <input type="file" id="file-upload" name="file-upload">
+    </form>
+
+    <a href="Pembelajaran_TambahBaru.html"><button class="add-studikasus">Add Studi Kasus</button></a>
+  </div>
+
+</body>
+</html>

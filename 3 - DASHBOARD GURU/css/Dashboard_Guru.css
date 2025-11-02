@@ -1,0 +1,290 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+
+/* Global Styles */
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  height: 100vh;
+  background-color: #f5faff;
+}
+
+/* Navbar Styles */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 98%;
+  height: 70px;
+  background: linear-gradient(to right, #3B1C32, #6A1E55);
+  color: #faf5ff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  box-shadow: 0 2px 5px #f5faff;
+  z-index: 1000;
+}
+
+/* Navbar Left */
+.navbar-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Navbar Title */
+.navbar-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+/* Top-right icons */
+.top-right-icons {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+
+.icon.profile-icon{
+  background-color: #f5faff;
+}
+
+.icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background-color: #a64d79;
+  border: 2px solid #3B1C32;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.icon i {
+  font-size: 20px;
+  color: #f5faff;
+}
+
+/* Gaya untuk label profile-icon */
+.profile-upload-label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background-color: #a64d79;
+  border: 2px solid #3B1C32;
+  border-radius: 50%;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+/* Gaya untuk gambar profil */
+.profile-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+/* Sidebar Styles */
+.sidebar {
+  width: 250px;
+  background: #CCACBC;
+  height: 100%;
+  position: fixed;
+  top: 70px;
+  left: 0;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.sidebar-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 15px 20px;
+  color: #3b1c32;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.menu-item.active, .menu-item:hover {
+  background: #f5faff;
+  color: #3B1C32;
+  font-weight: bold;
+}
+
+
+/* Content */
+.content {
+  margin-left: 250px;
+  padding: 80px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  width: calc(100% - 250px);
+}
+
+.welcome-message {
+  color: #3B1C32;
+  text-align: left;
+  font-size: 40px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+/* Adjustments for grades section */
+.grades {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  margin: 15px 0;
+  width: 100%;
+  margin-top: 0px;
+}
+
+.grades-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background: #f5faff;
+  border: 3px solid #3B1C32;
+  border-radius: 20px;
+  text-align: center;
+  color: #3B1C32;
+  font-size: 20px;
+  letter-spacing: 3px;
+}
+
+.grades-box h2 {
+  margin: 10px;
+}
+
+.grades-box .number {
+  font-size: 80px; /* Ukuran angka, sesuaikan dengan kebutuhan */
+  font-weight: bold; /* Menonjolkan angka dengan ketebalan font */
+  color: #6A1E55; /* Warna teks, jika diperlukan */
+  text-shadow:  0 0 20px #CCACBC;
+}
+
+.grades-box p {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  color: #3B1C32;
+}
+
+.grade-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background: #f5faff;
+  border: 3px solid #3B1C32;
+  border-radius: 20px;
+  text-align: center;
+  color: #3B1C32;
+  font-size: 20px;
+  letter-spacing: 3px;
+}
+
+.grade-box h2 {
+  margin: 5px;
+}
+
+/* Grafik Performa */
+.student-performance {
+  flex: 1;
+  max-width: 50%; /* Grafik hanya mengambil setengah lebar konten */
+  height: fit-content;
+  padding: 15px;
+  background: #f5faff;
+  border: 3px solid #3B1C32;
+  border-radius: 15px;
+  background-color: #f5faff;
+}
+
+.student-performance h2 {
+  margin: 5px;
+  color: #3B1C32;
+  text-align: center;
+  letter-spacing: 3px;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+/* Dashboard Overview */
+.dashboard-overview {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  flex: 1;
+  max-width: 50%; /* Mengambil setengah lebar konten utama */
+  justify-content: space-between; /* Meratakan elemen secara horizontal */
+  height: fit-content;
+}
+
+.overview-box {
+  flex: 50%; 
+  padding: 15px;
+  border: 3px solid #3B1C32;
+  border-radius: 20px;
+  box-shadow: 0 2px 5px #a64d79;
+  text-align: center;
+  height: fit-content;
+  align-items: center;
+}
+
+.overview-box h2 {
+  font-size: 18px;
+  color: #6A1E55;
+  align-items: center;
+  margin-bottom: 0px;
+  margin-top: 0px;
+  letter-spacing: 3px;
+}
+
+.overview-box .number {
+  font-size: 22px;
+  font-weight: 700;
+  color: #3B1C32;
+  text-align: center;
+  margin-bottom: 0px;
+  margin-top: 0px;
+  letter-spacing: 2px;
+}
+
+/* Export Button */
+.btn.export {
+  padding: 8px;
+  background: #3B1C32;
+  color: #f5faff;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 700;
+  align-items: center;
+  width: 100%;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  letter-spacing: 5px;
+}
+
+.btn.export:hover {
+  background: #6A1E55;
+}

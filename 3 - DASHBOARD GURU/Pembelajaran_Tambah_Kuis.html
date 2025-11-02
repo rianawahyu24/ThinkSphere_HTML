@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DASHBOARD GURU | PEMBELAJARAN</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="css/Pembelajaran_Tambah_Kuis.css">
+</head>
+
+<body>
+
+ <!-- Navbar -->
+  <header class="navbar">
+  <div class="navbar-left">
+    <div class="icon profile-icon">
+      <img src="images/Logo.png" alt="Profile" id="profile-image-left" class="profile-img" />
+    </div>
+    <h1 class="navbar-title">THINKSPHERE</h1>
+  </div>
+
+  <div class="top-right-icons">
+    <div class="icon">
+      <i class="fas fa-info-circle"></i>
+    </div>
+    <div class="icon">
+      <i class="fas fa-bell"></i>
+    </div>
+    <div class="icon profile-icon">
+      <!-- Input gambar -->
+      <label for="profile-upload" class="profile-upload-label">
+        <img src="images/Riana.JPG" alt="Profile" id="profile-image" class="profile-img" />
+      </label>
+      <input type="file" id="profile-upload" accept="image/*" style="display: none;" />
+    </div>
+  </div>
+  </header>
+
+  <!-- ganti gambar dengan upload baru -->
+  <script>
+    const profileUpload = document.getElementById('profile-upload');
+    const profileImage = document.getElementById('profile-image');
+  
+    profileUpload.addEventListener('change', function () {
+      const file = this.files[0];
+      if (file) {
+        const reader = new FileReader();
+        reader.onload = function (e) {
+          profileImage.src = e.target.result; // Ganti gambar dengan yang dipilih
+        };
+        reader.readAsDataURL(file);
+      }
+    });
+  </script>
+
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <nav class="sidebar-menu">
+      <a href="Dashboard_Guru.html" class="menu-item"><i class="fas fa-chart-line"></i>DASHBOARD</a>
+      <a href="Pembelajaran.html" class="menu-item active"><i class="fas fa-book"></i>PEMBELAJARAN</a>
+      <a href="Tugas.html" class="menu-item"><i class="fas fa-file-alt"></i>TUGAS</a>
+      <a href="Test.html" class="menu-item"><i class="fas fa-question-circle"></i>TEST</a>
+      <a href="Siswa.html" class="menu-item"><i class="fas fa-user"></i>SISWA</a>
+      <a href="#" class="menu-item"><i class="fas fa-sign-out-alt"></i>LOGOUT</a>
+    </nav>
+  </aside>
+
+  <script>
+    const menuItems = document.querySelectorAll('.menu-item');
+    menuItems.forEach(item => {
+      if (item.href === window.location.href) {
+        item.classList.add('active');
+      }
+    });
+  </script>
+
+  <!-- Content -->
+  <div class="content">
+    <h2 class="section-title">Membuat Kuis Baru !!</h2>
+    <a href="Pembelajaran_TambahBaru.html"><button class="cancel-button">Batalkan</button></a>
+    
+    <div class="ketentuan">
+      <h3>Ketentuan Kuis yang akan dikerjakan oleh siswa !!</h3>
+      <ul>
+        <li>Kuis yang dibuat adalah tahapan EVALUATION dari Model Learning Cycle 7E.</li>
+        <li>Kuis terdiri dari 10 soal berbentuk Pilihan ganda.</li>
+        <li>Setiap soal memiliki lima opsi pilihan jawaban yang berbeda.</li>
+        <li>Kuis menjadi salah satu syarat kelulusan materi pembelajaran.</li>
+      </ul>
+    </div>
+
+    <!-- KUIS -->
+    <form class="quiz-form">
+
+      <div class="question-row">
+        <!-- Soal Nomor 1 -->
+        <div class="question">
+          <h3>Soal Nomor 1</h3>
+          <input type="text" id="question1" name="question1" placeholder="Masukkan soal disini..." />
+    
+          <label for="answers1">Pilihan Jawaban</label>
+          <div class="answer-options">
+            <div class="answer">
+              <input type="text" placeholder="Masukkan Jawaban A" />
+              <i class="fas fa-times delete-icon"></i>
+              <i class="fas fa-check check-icon"></i>
+            </div>
+            <div class="answer">
+              <input type="text" placeholder="Masukkan Jawaban B" />
+              <i class="fas fa-times delete-icon"></i>
+              <i class="fas fa-check check-icon"></i>
+            </div>
+            <div class="answer">
+              <input type="text" placeholder="Masukkan Jawaban C" />
+              <i class="fas fa-times delete-icon"></i>
+              <i class="fas fa-check check-icon"></i>
+            </div>
+            <div class="answer">
+              <input type="text" placeholder="Masukkan Jawaban D" />
+              <i class="fas fa-times delete-icon"></i>
+              <i class="fas fa-check check-icon"></i>
+            </div>
+            <div class="answer">
+              <input type="text" placeholder="Masukkan Jawaban E" />
+              <i class="fas fa-times delete-icon"></i>
+              <i class="fas fa-check check-icon"></i>
+            </div>
+          </div>
+        </div>
+    
+        <!-- Soal Nomor 2 -->
+        <div class="question">
+          <h3>Soal Nomor 2</h3>
+          <input type="text" id="question2" name="question2" placeholder="Masukkan soal disini..." />
+    
+          <label for="answers2">Pilihan Jawaban</label>
+          <div class="answer-options">
+            <div class="answer">
+              <input type="text" placeholder="Masukkan Jawaban A" />
+              <i class="fas fa-times delete-icon"></i>
+              <i class="fas fa-check check-icon"></i>
+            </div>
+            <div class="answer">
+              <input type="text" placeholder="Masukkan Jawaban B" />
+              <i class="fas fa-times delete-icon"></i>
+              <i class="fas fa-check check-icon"></i>
+            </div>
+            <div class="answer">
+              <input type="text" placeholder="Masukkan Jawaban C" />
+              <i class="fas fa-times delete-icon"></i>
+              <i class="fas fa-check check-icon"></i>
+            </div>
+            <div class="answer">
+              <input type="text" placeholder="Masukkan Jawaban D" />
+              <i class="fas fa-times delete-icon"></i>
+              <i class="fas fa-check check-icon"></i>
+            </div>
+            <div class="answer">
+              <input type="text" placeholder="Masukkan Jawaban E" />
+              <i class="fas fa-times delete-icon"></i>
+              <i class="fas fa-check check-icon"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="question-row">
+        <!-- Soal Nomor 3 -->
+        <div class="question">
+          <h3>Soal Nomor 3</h3>
+          <input type="text" id="question1" name="question1" placeholder="Masukkan soal disini..." />
+    
+          <label for="answers1">Pilihan Jawaban</label>
+          <div class="answer-options">
+            <div class="answer">
+              <input type="text" placeholder="Masukkan Jawaban A" />
+              <i class="fas fa-times delete-icon"></i>
+              <i class="fas fa-check check-icon"></i>
+            </div>
+            <div class="answer">
+              <input type="text" placeholder="Masukkan Jawaban B" />
+              <i class="fas fa-times delete-icon"></i>
+              <i class="fas fa-check check-icon"></i>
+            </div>
+            <div class="answer">
+              <input type="text" placeholder="Masukkan Jawaban C" />
+              <i class="fas fa-times delete-icon"></i>
+              <i class="fas fa-check check-icon"></i>
+            </div>
+            <div class="answer">
+              <input type="text" placeholder="Masukkan Jawaban D" />
+              <i class="fas fa-times delete-icon"></i>
+              <i class="fas fa-check check-icon"></i>
+            </div>
+            <div class="answer">
+              <input type="text" placeholder="Masukkan Jawaban E" />
+              <i class="fas fa-times delete-icon"></i>
+              <i class="fas fa-check check-icon"></i>
+            </div>
+          </div>
+        </div>
+    
+        <!-- Soal Nomor 4 -->
+        <div class="question">
+          <h3>Soal Nomor 4</h3>
+          <input type="text" id="question2" name="question2" placeholder="Masukkan soal disini..." />
+    
+          <label for="answers2">Pilihan Jawaban</label>
+          <div class="answer-options">
+            <div class="answer">
+              <input type="text" placeholder="Masukkan Jawaban A" />
+              <i class="fas fa-times delete-icon"></i>
+              <i class="fas fa-check check-icon"></i>
+            </div>
+            <div class="answer">
+              <input type="text" placeholder="Masukkan Jawaban B" />
+              <i class="fas fa-times delete-icon"></i>
+              <i class="fas fa-check check-icon"></i>
+            </div>
+            <div class="answer">
+              <input type="text" placeholder="Masukkan Jawaban C" />
+              <i class="fas fa-times delete-icon"></i>
+              <i class="fas fa-check check-icon"></i>
+            </div>
+            <div class="answer">
+              <input type="text" placeholder="Masukkan Jawaban D" />
+              <i class="fas fa-times delete-icon"></i>
+              <i class="fas fa-check check-icon"></i>
+            </div>
+            <div class="answer">
+              <input type="text" placeholder="Masukkan Jawaban E" />
+              <i class="fas fa-times delete-icon"></i>
+              <i class="fas fa-check check-icon"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="question-row">
+        <!-- Soal Nomor 5 -->
+        <div class="question">
+          <h3>Soal Nomor 5</h3>
+          <input type="text" id="question1" name="question1" placeholder="Masukkan soal disini..." />
+    
+          <label for="answers1">Pilihan Jawaban</label>
+          <div class="answer-options">
+            <div class="answer">
+              <input type="text" placeholder="Masukkan Jawaban A" />
+              <i class="fas fa-times delete-icon"></i>
+              <i class="fas fa-check check-icon"></i>
+            </div>
+            <div class="answer">
+              <input type="text" placeholder="Masukkan Jawaban B" />
+              <i class="fas fa-times delete-icon"></i>
+              <i class="fas fa-check check-icon"></i>
+            </div>
+            <div class="answer">
+              <input type="text" placeholder="Masukkan Jawaban C" />
+              <i class="fas fa-times delete-icon"></i>
+              <i class="fas fa-check check-icon"></i>
+            </div>
+            <div class="answer">
+              <input type="text" placeholder="Masukkan Jawaban D" />
+              <i class="fas fa-times delete-icon"></i>
+              <i class="fas fa-check check-icon"></i>
+            </div>
+            <div class="answer">
+              <input type="text" placeholder="Masukkan Jawaban E" />
+              <i class="fas fa-times delete-icon"></i>
+              <i class="fas fa-check check-icon"></i>
+            </div>
+          </div>
+        </div>
+    
+        <!-- Soal Nomor 6 -->
+        <div class="question">
+          <h3>Soal Nomor 6</h3>
+          <input type="text" id="question2" name="question2" placeholder="Masukkan soal disini..." />
+    
+          <label for="answers2">Pilihan Jawaban</label>
+          <div class="answer-options">
+            <div class="answer">
+              <input type="text" placeholder="Masukkan Jawaban A" />
+              <i class="fas fa-times delete-icon"></i>
+              <i class="fas fa-check check-icon"></i>
+            </div>
+            <div class="answer">
+              <input type="text" placeholder="Masukkan Jawaban B" />
+              <i class="fas fa-times delete-icon"></i>
+              <i class="fas fa-check check-icon"></i>
+            </div>
+            <div class="answer">
+              <input type="text" placeholder="Masukkan Jawaban C" />
+              <i class="fas fa-times delete-icon"></i>
+              <i class="fas fa-check check-icon"></i>
+            </div>
+            <div class="answer">
+              <input type="text" placeholder="Masukkan Jawaban D" />
+              <i class="fas fa-times delete-icon"></i>
+              <i class="fas fa-check check-icon"></i>
+            </div>
+            <div class="answer">
+              <input type="text" placeholder="Masukkan Jawaban E" />
+              <i class="fas fa-times delete-icon"></i>
+              <i class="fas fa-check check-icon"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="question-row">
+        <!-- Soal Nomor 7 -->
+        <div class="question">
+          <h3>Soal Nomor 7</h3>
+          <input type="text" id="question1" name="question1" placeholder="Masukkan soal disini..." />
+    
+          <label for="answers1">Pilihan Jawaban</label>
+          <div class="answer-options">
+            <div class="answer">
+              <input type="text" placeholder="Masukkan Jawaban A" />
+              <i class="fas fa-times delete-icon"></i>
+              <i class="fas fa-check check-icon"></i>
+            </div>
+            <div class="answer">
+              <input type="text" placeholder="Masukkan Jawaban B" />
+              <i class="fas fa-times delete-icon"></i>
+              <i class="fas fa-check check-icon"></i>
+            </div>
+            <div class="answer">
+              <input type="text" placeholder="Masukkan Jawaban C" />
+              <i class="fas fa-times delete-icon"></i>
+              <i class="fas fa-check check-icon"></i>
+            </div>
+            <div class="answer">
+              <input type="text" placeholder="Masukkan Jawaban D" />
+              <i class="fas fa-times delete-icon"></i>
+              <i class="fas fa-check check-icon"></i>
+            </div>
+            <div class="answer">
+              <input type="text" placeholder="Masukkan Jawaban E" />
+              <i class="fas fa-times delete-icon"></i>
+              <i class="fas fa-check check-icon"></i>
+            </div>
+          </div>
+        </div>
+    
+        <!-- Soal Nomor 8 -->
+        <div class="question">
+          <h3>Soal Nomor 8</h3>
+          <input type="text" id="question2" name="question2" placeholder="Masukkan soal disini..." />
+    
+          <label for="answers2">Pilihan Jawaban</label>
+          <div class="answer-options">
+            <div class="answer">
+              <input type="text" placeholder="Masukkan Jawaban A" />
+              <i class="fas fa-times delete-icon"></i>
+              <i class="fas fa-check check-icon"></i>
+            </div>
+            <div class="answer">
+              <input type="text" placeholder="Masukkan Jawaban B" />
+              <i class="fas fa-times delete-icon"></i>
+              <i class="fas fa-check check-icon"></i>
+            </div>
+            <div class="answer">
+              <input type="text" placeholder="Masukkan Jawaban C" />
+              <i class="fas fa-times delete-icon"></i>
+              <i class="fas fa-check check-icon"></i>
+            </div>
+            <div class="answer">
+              <input type="text" placeholder="Masukkan Jawaban D" />
+              <i class="fas fa-times delete-icon"></i>
+              <i class="fas fa-check check-icon"></i>
+            </div>
+            <div class="answer">
+              <input type="text" placeholder="Masukkan Jawaban E" />
+              <i class="fas fa-times delete-icon"></i>
+              <i class="fas fa-check check-icon"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="question-row">
+        <!-- Soal Nomor 9 -->
+        <div class="question">
+          <h3>Soal Nomor 9</h3>
+          <input type="text" id="question1" name="question1" placeholder="Masukkan soal disini..." />
+    
+          <label for="answers1">Pilihan Jawaban</label>
+          <div class="answer-options">
+            <div class="answer">
+              <input type="text" placeholder="Masukkan Jawaban A" />
+              <i class="fas fa-times delete-icon"></i>
+              <i class="fas fa-check check-icon"></i>
+            </div>
+            <div class="answer">
+              <input type="text" placeholder="Masukkan Jawaban B" />
+              <i class="fas fa-times delete-icon"></i>
+              <i class="fas fa-check check-icon"></i>
+            </div>
+            <div class="answer">
+              <input type="text" placeholder="Masukkan Jawaban C" />
+              <i class="fas fa-times delete-icon"></i>
+              <i class="fas fa-check check-icon"></i>
+            </div>
+            <div class="answer">
+              <input type="text" placeholder="Masukkan Jawaban D" />
+              <i class="fas fa-times delete-icon"></i>
+              <i class="fas fa-check check-icon"></i>
+            </div>
+            <div class="answer">
+              <input type="text" placeholder="Masukkan Jawaban E" />
+              <i class="fas fa-times delete-icon"></i>
+              <i class="fas fa-check check-icon"></i>
+            </div>
+          </div>
+        </div>
+    
+        <!-- Soal Nomor 10 -->
+        <div class="question">
+          <h3>Soal Nomor 10</h3>
+          <input type="text" id="question2" name="question2" placeholder="Masukkan soal disini..." />
+    
+          <label for="answers2">Pilihan Jawaban</label>
+          <div class="answer-options">
+            <div class="answer">
+              <input type="text" placeholder="Masukkan Jawaban A" />
+              <i class="fas fa-times delete-icon"></i>
+              <i class="fas fa-check check-icon"></i>
+            </div>
+            <div class="answer">
+              <input type="text" placeholder="Masukkan Jawaban B" />
+              <i class="fas fa-times delete-icon"></i>
+              <i class="fas fa-check check-icon"></i>
+            </div>
+            <div class="answer">
+              <input type="text" placeholder="Masukkan Jawaban C" />
+              <i class="fas fa-times delete-icon"></i>
+              <i class="fas fa-check check-icon"></i>
+            </div>
+            <div class="answer">
+              <input type="text" placeholder="Masukkan Jawaban D" />
+              <i class="fas fa-times delete-icon"></i>
+              <i class="fas fa-check check-icon"></i>
+            </div>
+            <div class="answer">
+              <input type="text" placeholder="Masukkan Jawaban E" />
+              <i class="fas fa-times delete-icon"></i>
+              <i class="fas fa-check check-icon"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </form>   
+
+    <a href="Pembelajaran_TambahBaru.html"><button class="add-kuis">Add Kuis</button></a>
+  </div>
+
+</body>
+</html>

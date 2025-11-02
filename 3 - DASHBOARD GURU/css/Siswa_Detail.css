@@ -1,0 +1,304 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+
+/* Global Styles */
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  height: 100vh;
+  background-color: #f5faff;
+}
+
+/* Navbar Styles */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 98%;
+  height: 70px;
+  background: linear-gradient(to right, #3B1C32, #6A1E55);
+  color: #faf5ff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  box-shadow: 0 2px 5px #f5faff;
+  z-index: 1000;
+}
+
+/* Navbar Left */
+.navbar-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Navbar Title */
+.navbar-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+/* Top-right icons */
+.top-right-icons {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.icon.profile-icon{
+  background-color: #f5faff;
+}
+
+.icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background-color: #a64d79;
+  border: 2px solid #3B1C32;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.icon i {
+  font-size: 20px;
+  color: #f5faff;
+}
+
+/* Gaya untuk label profile-icon */
+.profile-upload-label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background-color: #a64d79;
+  border: 2px solid #3B1C32;
+  border-radius: 50%;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+/* Gaya untuk gambar profil */
+.profile-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+/* Sidebar Styles */
+.sidebar {
+  width: 250px;
+  background: #CCACBC;
+  height: 100%;
+  position: fixed;
+  top: 70px;
+  left: 0;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.sidebar-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 15px 20px;
+  color: #3b1c32;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.menu-item.active, .menu-item:hover {
+  background: #f5faff;
+  color: #3B1C32;
+  font-weight: bold;
+}
+
+/* Content */
+.content {
+  margin-left: 250px;
+  padding: 80px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: calc(100% - 250px);
+}
+
+/* Student Details */
+.student-details-box {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  margin-bottom: 5px; /* Memberi jarak dengan box grades */
+}
+
+.student-profile {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.student-photo {
+  border-radius: 50%;
+  border: 5px solid #3B1C32;
+  width: 150px;
+  height: 150px;
+  overflow: hidden;
+  box-shadow: 5px 7px 25px rgba(0, 0, 0, 0.5);
+}
+
+.student-profile img:hover {
+  transform: scale(1.2);
+}
+
+.student-info p {
+  margin: 5px 0;
+  margin-left: 18px;
+  color: #3B1C32;
+  font-weight: 600;
+  font-size: 30px;
+}
+
+.id {
+  padding: 10px 20px;
+  border-radius: 5px;
+  background: #3B1C32;
+  color: #f5faff;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  letter-spacing: 3px;
+  margin-top: 5px;
+  margin-bottom: 0px;
+  margin-left: 18px;
+}
+
+
+/* Grades Section */
+.student-grades-box {
+  border-radius: 20px;
+  border: 3px solid #3B1C32;
+  align-items: center;
+}
+
+.student-grades-box h2 {
+  text-align: center;
+  color: #3B1C32;
+  font-size: 25px;
+  letter-spacing: 3px;
+  margin-bottom: 5px;
+}
+
+.grades-box {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  align-items: center;
+  text-align: center;
+  font-size: 20px;
+  letter-spacing: 3px;
+  justify-content: center;
+}
+
+.grades-box .numbers {
+  font-size: 20px; /* Ukuran angka, sesuaikan dengan kebutuhan */
+  font-weight: bold; /* Menonjolkan angka dengan ketebalan font */
+  color: #3B1C32; /* Warna teks, jika diperlukan */
+  margin: 3px;
+  align-items: center;
+}
+
+.grade-button {
+  padding: 10px 20px;
+  border-radius: 10px;
+  background: #6A1E55;
+  color: #f5faff;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  letter-spacing: 3px;
+  margin-top: 5px;
+  margin-bottom: 0px;
+}
+
+.grades-buttons-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  width: 100%;
+}
+
+/* Tasks and Materials Section */
+.tasks-and-materials {
+  display: flex;
+  gap: 20px;
+}
+
+.tasks,
+.materials {
+  flex: 1;
+  padding: 20px;
+  border-radius: 20px;
+  border: 3px solid #3B1C32;
+}
+
+.tasks table,
+.materials table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.tasks h2, .materials h2{
+  color: #3B1C32;
+  font-size: 25px;
+  margin: 3px;
+  text-align: center;
+  letter-spacing: 3px;
+}
+
+.tasks table th,
+.materials table th,
+.tasks table td,
+.materials table td {
+  border: 2px solid #3B1C32;
+  padding: 4px;
+  text-align: center;
+  font-size: 16px;
+}
+
+.tasks table th,
+.materials table th {
+  background: #6A1E55;
+  color: #fff;
+  font-weight: 650;
+  letter-spacing: 2px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .content {
+    flex-direction: column;
+    margin-left: 0;
+    padding: 20px;
+  }
+
+  .student-details,
+  .tasks,
+  .materials {
+    flex-direction: column;
+    width: 100%;
+  }
+}

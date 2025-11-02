@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>THINKSPHERE | PEMBELAJARAN</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="css/Pembelajaran_Deskripsi.css">
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="navbar-left">
+      <div class="icon profile-icon">
+        <img src="images/Logo.png" alt="Profile" id="profile-image-left" class="profile-img" />
+      </div>
+      <h1 class="navbar-title">THINKSPHERE</h1>
+    </div>
+  
+    <div class="top-right-icons">
+      <div class="icon">
+        <i class="fas fa-info-circle"></i>
+      </div>
+      <div class="icon">
+        <i class="fas fa-bell"></i>
+      </div>
+      <div class="icon profile-icon">
+        <!-- Input gambar -->
+        <label for="profile-upload" class="profile-upload-label">
+          <img src="images/Riana.JPG" alt="Profile" id="profile-image" class="profile-img" />
+        </label>
+        <input type="file" id="profile-upload" accept="image/*" style="display: none;" />
+      </div>
+    </div>
+  </header>
+
+  <!-- ganti gambar dengan upload baru -->
+  <script>
+      const profileUpload = document.getElementById('profile-upload');
+      const profileImage = document.getElementById('profile-image');
+    
+      profileUpload.addEventListener('change', function () {
+        const file = this.files[0];
+        if (file) {
+          const reader = new FileReader();
+          reader.onload = function (e) {
+            profileImage.src = e.target.result; // Ganti gambar dengan yang dipilih
+          };
+          reader.readAsDataURL(file);
+        }
+      });
+  </script>
+
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <nav class="sidebar-menu">
+      <a href="Dashboard_Siswa.html" class="menu-item"><i class="fas fa-chart-line"></i>DASHBOARD</a>
+      <a href="Pembelajaran.html" class="menu-item active"><i class="fas fa-book"></i>PEMBELAJARAN</a>
+      <a href="Tugas.html" class="menu-item"><i class="fas fa-file-alt"></i>TUGAS</a>
+      <a href="Test.html" class="menu-item"><i class="fas fa-question-circle"></i>TEST</a>
+      <a href="#" class="menu-item"><i class="fas fa-sign-out-alt"></i>LOGOUT</a>
+    </nav>
+  </aside>
+
+  <script>
+    const menuItems = document.querySelectorAll('.menu-item');
+    menuItems.forEach(item => {
+      if (item.href === window.location.href) {
+        item.classList.add('active');
+      }
+    });
+  </script>
+
+  <!-- Main Content -->
+  <div class="main-content">
+    <!-- Box 1: Komponen Sistem & Isi Materi -->
+    <div class="box">
+      <div class="box-header">
+        <h1>KOMPONEN SISTEM KOMPUTER</h1>
+        <p>Pembelajaran ini menggunakan model Learning Cycle 7E yang terdiri dari tujuh  
+        <br>tahapan yaitu Elicit, Engage, Explore , Explain , Elaborate , Evaluate , dan Extend.
+        <br>Model ini dirancang untuk mendorong keterlibatan aktif, berpikir kritis, 
+        <br>dan pemahaman mendalam pada siswa.
+        </p>
+        <a href="Pembelajaran_Tahap1.html"><button class="start-button">Start</button></a>
+      </div>
+      <div class="box-content">
+        <h2>ISI MATERI !!!</h2>
+        <ul>
+          <li>Assessment Diagnostik</li>
+          <li>Video Pembelajaran</li>
+          <li>Simulasi</li>
+          <li>Materi</li>
+          <li>Studi Kasus</li>
+          <li>Kuis</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Box 2: Time to Complete & Kuis Singkat -->
+    <div class="box">
+      <div class="box-content-row">
+        <div class="time-card">
+          <i class="fas fa-clock"></i>
+          <p>Time to Complete!
+          <br> 100 minute
+          </p>
+        </div>
+        <div class="quiz-card">
+          <i class="fas fa-file-alt"></i>
+          <p>Kuis Singkat
+          <br>1</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Details Section -->
+    <div class="details-section">
+      <div class="left">
+        <h4>Tentang Materi Ini</h4>
+        <p>teks teks teks teks teks teks teks teks teks teks teks teks teks teks teks teks
+        <br>teks teks teks teks teks teks teks teks teks teks teks teks teks teks teks teks
+        <br>teks teks teks teks teks teks teks teks teks teks teks teks teks teks teks teks
+        <br>teks teks teks teks teks teks teks teks teks teks teks teks teks teks teks teks
+        </p>
+      </div>
+      <div class="right">
+        <h4>Tujuan Pembelajaran</h4>
+        <ul>
+          <li>TP 1</li>
+          <li>TP 2</li>
+          <li>TP 3</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="syllabus-section">
+      <h4>Silabus</h4>
+      <p>4 Materi | 1 Simulasi | 1 Studi Kasus | 1 Kuis</p>
+      <div class="accordion">
+        <div class="accordion-item">Pengertian Sistem Komputer</div>
+        <div class="accordion-item">Hardware</div>
+        <div class="accordion-item">Software</div>
+        <div class="accordion-item">Brainware</div>
+        <br>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

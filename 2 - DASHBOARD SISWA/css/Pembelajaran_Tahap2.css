@@ -1,0 +1,200 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+
+/* Global Styles */
+body {
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    display: flex;
+    height: 100vh;
+    background-color: #f5faff;
+  }
+  
+ 
+/* Navbar Styles */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 98%;
+  height: 70px;
+  background: linear-gradient(to right, #3B1C32, #6A1E55);
+  color: #faf5ff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  box-shadow: 0 2px 5px #f5faff;
+  z-index: 1000;
+}
+
+/* Navbar Left */
+.navbar-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Navbar Title */
+.navbar-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+/* Top-right icons */
+.top-right-icons {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+
+.icon.profile-icon{
+  background-color: #f5faff;
+}
+
+.icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background-color: #a64d79;
+  border: 2px solid #3B1C32;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.icon i {
+  font-size: 20px;
+  color: #f5faff;
+}
+
+/* Gaya untuk label profile-icon */
+.profile-upload-label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background-color: #a64d79;
+  border: 2px solid #3B1C32;
+  border-radius: 50%;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+/* Gaya untuk gambar profil */
+.profile-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+/* Sidebar Styles */
+.sidebar {
+  width: 250px;
+  background: #CCACBC;
+  height: 100%;
+  position: fixed;
+  top: 70px;
+  left: 0;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.sidebar-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 15px 20px;
+  color: #3b1c32;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.menu-item.active, .menu-item:hover {
+  background: #f5faff;
+  color: #3B1C32;
+  font-weight: bold;
+}
+
+/* Content Styles */
+.content {
+  margin-left: 250px;
+  padding: 80px 20px;
+  width: calc(100% - 250px);
+  text-align: center;
+}
+
+.section-title {
+  font-size: 30px;
+  color: #3b1c32;
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+
+.deskripsi{
+    color: #6A1E55;
+    font-size: 14px;
+    padding-bottom: 8px;
+    margin-bottom: 5px;
+}
+
+.video-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 3px solid #3B1C32;
+    box-shadow: 0 2px 5px #a64d79;
+    padding: 20px;
+    border-radius: 20px;
+    background-color: #f5faff;
+}
+
+.video-container video {
+    max-width: 100%;
+    border: 1px solid #3B1C32;
+    border-radius: 10px;  
+}
+
+.video-container h1 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #3b1c32;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    text-align: center;
+}
+
+/* Footer Styles */
+.footer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.footer button {
+    padding: 10px 20px;
+    background-color: #3B1C32;
+    color: #f5faff;
+    border: none;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.footer button:hover {
+    background-color: #a64d79;
+}
